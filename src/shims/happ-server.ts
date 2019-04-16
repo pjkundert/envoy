@@ -52,8 +52,16 @@ export const HAPP_DATABASE = [
       hash: 'QmBasicChatFakeHash'
     },
   },
-
-  // The following are for testing only
+  {
+    happId: 'QmWvWfe3WrC9YLRMBvMn81obeSuNbx3oPAd9SSah9KQvGR',
+    nick: 'holofuel',
+    dnas: [
+      {location: 'http://localhost:5555/holofuel/dna/holofuel.dna.json',
+      hash: 'QmajByGX73VgV7Rh1QRt8AVAgvA6FVviHoMAcC5X3v4VnD'},
+    ],
+    ui: {location: 'http://localhost:5555/holofuel/ui.zip',
+    hash: 'QUIFAKEHASH'}
+  },  // The following are for testing only
   {
     happId: 'test-app-1',
     nick: 'test-app-1',
