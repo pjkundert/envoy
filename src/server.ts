@@ -224,12 +224,17 @@ header:
 :req[header]
 `
     // const logFormat = 'combined'
-    app.use(morgan(logFormat))
+    // app.use(morgan(logFormat))
     // use the following for file-based logging
     // const logStream = fs.createWriteStream(path.join(__dirname, '..', 'log', 'access.log'), { flags: 'a' })
     // app.use(morgan('combined', {stream: logStream}))
 
-    app.use(`/`, express.static(uiDir))
+    app.use(`/`, (req, res) => {
+      console.log("REQUEST:", req)
+      console.log("REQUEST (stringified):", JSON.stringify(req, null, 2))
+      res.send('hacking in progress')
+    })
+    // app.use(`/`, express.static(uiDir))
 
     return require('http').createServer(app)
   }
