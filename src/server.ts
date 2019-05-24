@@ -231,12 +231,12 @@ header:
 
     app.all(`/`, (req, res) => {
       console.log("REQUEST:", req)
-      console.log("REQUEST (stringified):", JSON.stringify(req, null, 2))
+      // console.log("REQUEST (stringified):", JSON.stringify(req, null, 2))
       res.send('hacking in progress')
     })
     app.all(`/*`, (req, res) => {
       console.log("REQUEST:", req)
-      console.log("REQUEST (stringified):", JSON.stringify(req, null, 2))
+      // console.log("REQUEST (stringified):", JSON.stringify(req, null, 2))
       res.send('hacking in progress')
     })
     // app.use(`/`, express.static(uiDir))
